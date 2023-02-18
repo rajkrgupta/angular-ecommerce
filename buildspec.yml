@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - npm install -g @angular/cli@10.2.4
+  pre_build:
+    commands:
+      - echo npm install started echo
+      - npm install
+      - echo printing folder details echo
+      - pwd
+      - ls
+      - ng version
+  build:
+    commands:
+      - npm run build --prod
+      - echo after build prod printing folder contents echo
+      - ls
+    finally:
+      - echo final block echo
+
+artifacts:
+  base-directory: dist/angular-ecommerce
+  files:
+    - '**/*'
