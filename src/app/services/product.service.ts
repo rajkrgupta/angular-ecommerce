@@ -13,7 +13,7 @@ export class ProductService {
 
   private baseUrl = environment.luv2shopApiUrl + '/products';
 
-  private categoryUrl = environment.luv2shopApiUrl + '/product-category';
+  private categoryUrl = environment.luv2shopApiUrl + '/productCategories';
 
   constructor(private httpClient: HttpClient) { }
 
